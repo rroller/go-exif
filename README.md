@@ -145,7 +145,7 @@ log.PanicIf(err)
 data, err := ioutil.ReadAll(f)
 log.PanicIf(err)
 
-exifData, err := exit.SearchAndExtractExif(data[i:i + 6])
+exifData, err := exif.SearchAndExtractExif(data[i:i + 6])
 if err != nil {
     if err == exif.ErrNoExif {
         fmt.Printf("EXIF data not found.\n")
